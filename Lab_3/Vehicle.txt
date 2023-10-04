@@ -1,0 +1,5 @@
+123, chilron, red, 2000000, bungati, car, 2020
+234, chilronn, white, 2100000, bungati, car, 2021
+345, aventador, orange, 1900000, lamboghini, car, 2017
+456, winner, gray, 2000, honda, motobike, 2022
+567, exciter, blue, 2500, yamaha, motobike, 2023
