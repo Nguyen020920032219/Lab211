@@ -3,3 +3,4 @@
 345, aventador, orange, 1900000, lamboghini, car, 2017
 456, winner, gray, 2000, honda, motobike, 2022
 567, exciter, blue, 2500, yamaha, motobike, 2023
+777, vision, gray, 1500, honda, motobike, 2020

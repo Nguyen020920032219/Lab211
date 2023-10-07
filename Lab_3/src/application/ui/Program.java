@@ -189,6 +189,17 @@ public class Program {
             }
         }
     }
+//    private static void deleteVehicle() throws Exception {
+//        String name = DataInput.getString("Enter name to delete:");
+//        do {
+//            Vehicle v = searchVehicleByName(name);
+//            if (v == null) {
+//                break;
+//            } else {
+//                service.getList().remove(v);
+//            }
+//        } while (true);
+//    }
 
 //Tìm kiếm phương tiện <=> case 5
     private static void searchVehicle() throws Exception {
@@ -232,8 +243,10 @@ public class Program {
                 }
             } else if (choice == 2) {
                 List<String> ids = searchVehicleByPrice();
+//                List<String> ids = searchVehicleByName();
                 if (ids.isEmpty()) {
                     System.out.println(">>>>>Don't have any vehicle with price less than inputed price.");
+//                    System.out.println(">>>>>Don't have any vehicle with name contains inputed x.");
                 } else {
                     for (String id : ids) {
                         for (Vehicle vehicle : service.getList()) {
@@ -322,6 +335,15 @@ public class Program {
         return null;
     }
 
+    private static Vehicle searchVehicleByName(String name) throws Exception {
+        for (Vehicle vehicle : service.getList()) {
+            if (vehicle.getName().contains(name)) {
+                return vehicle;
+            }
+        }
+        return null;
+    }
+
     private static List<String> searchVehicleByName() throws Exception {
         String name = DataInput.getString("Enter name to search:");
         List<String> codes = new ArrayList<>();
@@ -365,5 +387,4 @@ public class Program {
         }
         return codes;
     }
-
 }
